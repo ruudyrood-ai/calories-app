@@ -97,3 +97,11 @@ if ("serviceWorker" in navigator) {
     .then(() => console.log("Service Worker зарегистрирован"))
     .catch((err) => console.log("Ошибка SW:", err));
 }
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("sw.js")
+      .then((reg) => console.log("Service Worker зарегистрирован успешно"))
+      .catch((err) => console.log("Ошибка регистрации Service Worker:", err));
+  });
+}
