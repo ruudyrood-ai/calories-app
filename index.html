@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Мой Калорийник</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="manifest.json" />
+  </head>
+  <body>
+    <div class="app-container">
+      <section class="card">
+        <h2>Расчет нормы ккал</h2>
+        <div class="input-group">
+          <input type="number" id="weight" placeholder="Вес (кг)" />
+          <input type="number" id="height" placeholder="Рост (см)" />
+          <input type="number" id="age" placeholder="Возраст" />
+        </div>
+        <select id="activity">
+          <option value="1.2">Сидячий образ жизни</option>
+          <option value="1.55">Средняя активность</option>
+          <option value="1.725">Высокая активность (работа + вел)</option>
+        </select>
+        <button onclick="calculateNorm()">Рассчитать норму</button>
+        <div id="norm-result" class="result-text"></div>
+      </section>
+
+      <section class="card progress-section">
+        <h2>Дневной баланс</h2>
+        <div class="balance-grid">
+          <div>Норма: <span id="target-calories">0</span> ккал</div>
+          <div>Съедено: <span id="total-eaten">0</span> ккал</div>
+          <div>Осталось: <span id="calories-left">0</span> ккал</div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Добавить блюдо</h2>
+        <div class="input-group-row">
+          <input
+            type="text"
+            id="food-name"
+            placeholder="Название (например, Творог)"
+          />
+          <input type="number" id="food-calories" placeholder="ккал" />
+        </div>
+        <button onclick="addFood()" class="btn-add">Добавить в дневник</button>
+
+        <ul id="food-list" class="food-list"></ul>
+        <button onclick="clearDay()" class="btn-clear">Сбросить день</button>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 480px; /* Идеально для мобильного экрана */
+}
+
+.card {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #00adb5;
+}
+
+.input-group,
+.input-group-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.input-group-row input[type="text"] {
+  flex: 2;
+}
+.input-group-row input[type="number"] {
+  flex: 1;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  background-color: #2d2d2d;
+  border: 1px solid #3d3d3d;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+}
+
+input:focus {
+  border-color: #00adb5;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background-color: #00adb5;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:active {
+  background-color: #007a80;
+}
+
+.btn-clear {
+  background-color: #3d3d3d;
+  margin-top: 15px;
+}
+.btn-clear:active {
+  background-color: #cf6679;
+}
+
+.result-text {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.balance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.balance-grid span {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 5px;
+  color: #fff;
+}
+
+.food-list {
+  margin-top: 15px;
+  list-style: none;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.food-list li {
+  background-color: #2d2d2d;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+}
