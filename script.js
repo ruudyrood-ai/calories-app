@@ -90,3 +90,10 @@ function clearDay() {
     updateInterface();
   }
 }
+// Регистрация Service Worker для PWA
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("sw.js")
+    .then(() => console.log("Service Worker зарегистрирован"))
+    .catch((err) => console.log("Ошибка SW:", err));
+}
